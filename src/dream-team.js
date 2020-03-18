@@ -1,4 +1,13 @@
-module.exports = function createDreamTeam(/* members */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
+module.exports = function createDreamTeam(members) {
+  let team = "";
+  let x = members.filter(g => {
+    return typeof g == "string";
+  })
+  x.sort();
+  q = x.map(el => {
+    return el[0]
+  })
+  let w = q.join('');
+  r = w.toUpperCase();
+  return r;
 };
