@@ -1,13 +1,18 @@
 module.exports = function createDreamTeam(members) {
+  if (!Array.isArray(members)) return false;
   let team = "";
   let x = members.filter(g => {
     return typeof g == "string";
   })
-  x.sort();
-  q = x.map(el => {
+  let t = x.map(ele => {
+    return ele.trim().toUpperCase();
+      })
+  t.sort();
+ 
+  q = t.map(el => {
     return el[0]
   })
+
   let w = q.join('');
-  r = w.toUpperCase();
-  return r;
+  return w;
 };
