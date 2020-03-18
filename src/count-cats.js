@@ -1,4 +1,12 @@
-module.exports = function countCats(/* matrix */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
+module.exports = function countCats(matrix) {
+  let cats = 0;
+  matrix.forEach(element => {
+    let q = element.filter(yshi => {
+      return yshi == '^^';
+    });
+
+    cats = cats + q.length
+  });
+
+  return cats;
 };
